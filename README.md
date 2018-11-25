@@ -66,8 +66,8 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
 
 
 ## Usages:
-### Public Methods:
-#### Getters & Setters:
+> Public Methods:
+>> Getters & Setters:
 ```Java
 mSlidingDrawerLayout.setLeftDrawerWidthPercent(
         SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT /* default value */);
@@ -85,14 +85,14 @@ mSlidingDrawerLayout.setContentSensitiveEdgeSize(
 mSlidingDrawerLayout.setContentFadeColor(/* ColorInt */ 0xFF_FF4081);
 ```
 
-#### Open/Close a Drawer:
+>> Open/Close a Drawer:
 ```Java
 mSlidingDrawerLayout.openDrawer(GravityCompat.START, /* animate */ true);
-mSlidingDrawerLayout.openDrawer(mEndDrawer, /* animate */ true);
+mSlidingDrawerLayout.openDrawer(mStartDrawer, /* animate */ true);
 mSlidingDrawerLayout.closeDrawer(/* animate */ true);
 ```
 
-#### Listener Related:
+>> Listener Related:
 ```Java
 final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLayout.OnDrawerScrollListener() {
     @Override
@@ -104,7 +104,7 @@ final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLay
     }
 
     @Override
-    public void onScrollPercentChange(@NonNull SlidingDrawerLayout parent, 
+    public void onScrollPercentChange(@NonNull SlidingDrawerLayout parent,
                                       @NonNull View drawer, float percent) {
     }
 
@@ -118,7 +118,7 @@ mSlidingDrawerLayout.removeOnDrawerScrollListener(listener);
 mSlidingDrawerLayout.clearOnDrawerScrollListeners();
 ```
 
-### Attributes:
+> Attributes:
 ```xml
 app:widthPercent_leftDrawer="unspecified"
 app:widthPercent_rightDrawer="unspecified"
