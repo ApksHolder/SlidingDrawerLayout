@@ -66,59 +66,59 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
 
 
 ## Usages:
-> Public Methods:
->> Getters & Setters:
-```Java
-mSlidingDrawerLayout.setLeftDrawerWidthPercent(
-        SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT /* default value */);
-mSlidingDrawerLayout.setRightDrawerWidthPercent(
-        SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT);
-mSlidingDrawerLayout.setStartDrawerWidthPercent(0.8f);
-mSlidingDrawerLayout.setEndDrawerWidthPercent(0.9f);
+### Public Methods:
+- Getters & Setters:
+    ```Java
+    mSlidingDrawerLayout.setLeftDrawerWidthPercent(
+            SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT /* default value */);
+    mSlidingDrawerLayout.setRightDrawerWidthPercent(
+            SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT);
+    mSlidingDrawerLayout.setStartDrawerWidthPercent(0.8f);
+    mSlidingDrawerLayout.setEndDrawerWidthPercent(0.9f);
+    
+    mSlidingDrawerLayout.setDrawerEnabledInTouch(GravityCompat.START, true /* default value */);
+    mSlidingDrawerLayout.setDrawerEnabledInTouch(mEndDrawer, true);
+    
+    mSlidingDrawerLayout.setDuration(256 /* in milliseconds */);
+    mSlidingDrawerLayout.setContentSensitiveEdgeSize(
+            50f * getResources().getDisplayMetrics().density /* in pixels */);
+    mSlidingDrawerLayout.setContentFadeColor(/* ColorInt */ 0xFF_FF4081);
+    ```
 
-mSlidingDrawerLayout.setDrawerEnabledInTouch(GravityCompat.START, true /* default value */);
-mSlidingDrawerLayout.setDrawerEnabledInTouch(mEndDrawer, true);
-
-mSlidingDrawerLayout.setDuration(256 /* in milliseconds */);
-mSlidingDrawerLayout.setContentSensitiveEdgeSize(
-        50f * getResources().getDisplayMetrics().density /* in pixels */);
-mSlidingDrawerLayout.setContentFadeColor(/* ColorInt */ 0xFF_FF4081);
-```
-
->> Open/Close a Drawer:
-```Java
-mSlidingDrawerLayout.openDrawer(GravityCompat.START, /* animate */ true);
-mSlidingDrawerLayout.openDrawer(mStartDrawer, /* animate */ true);
-mSlidingDrawerLayout.closeDrawer(/* animate */ true);
-```
+- Open/Close a Drawer:
+    ```Java
+    mSlidingDrawerLayout.openDrawer(GravityCompat.START, /* animate */ true);
+    mSlidingDrawerLayout.openDrawer(mStartDrawer, /* animate */ true);
+    mSlidingDrawerLayout.closeDrawer(/* animate */ true);
+    ```
 
 >> Listener Related:
-```Java
-final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLayout.OnDrawerScrollListener() {
-    @Override
-    public void onDrawerOpened(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
-    }
+    ```Java
+    final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLayout.OnDrawerScrollListener() {
+        @Override
+        public void onDrawerOpened(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
+        }
+    
+        @Override
+        public void onDrawerClosed(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
+        }
+    
+        @Override
+        public void onScrollPercentChange(@NonNull SlidingDrawerLayout parent,
+                                          @NonNull View drawer, float percent) {
+        }
+    
+        @Override
+        public void onScrollStateChange(@NonNull SlidingDrawerLayout parent,
+                                        @NonNull View drawer, int state) {
+        }
+    };
+    mSlidingDrawerLayout.addOnDrawerScrollListener(listener);
+    mSlidingDrawerLayout.removeOnDrawerScrollListener(listener);
+    mSlidingDrawerLayout.clearOnDrawerScrollListeners();
+    ```
 
-    @Override
-    public void onDrawerClosed(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
-    }
-
-    @Override
-    public void onScrollPercentChange(@NonNull SlidingDrawerLayout parent,
-                                      @NonNull View drawer, float percent) {
-    }
-
-    @Override
-    public void onScrollStateChange(@NonNull SlidingDrawerLayout parent,
-                                    @NonNull View drawer, int state) {
-    }
-};
-mSlidingDrawerLayout.addOnDrawerScrollListener(listener);
-mSlidingDrawerLayout.removeOnDrawerScrollListener(listener);
-mSlidingDrawerLayout.clearOnDrawerScrollListeners();
-```
-
-> Attributes:
+### Attributes:
 ```xml
 app:widthPercent_leftDrawer="unspecified"
 app:widthPercent_rightDrawer="unspecified"
