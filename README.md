@@ -68,13 +68,36 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
 ## Usages:
 ### Public Methods:
 #### Getters & Setters:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/getters%20%26%20setters.png" width="500">
+```Java
+mSlidingDrawerLayout.setLeftDrawerWidthPercent(
+        SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT /* default value */);
+mSlidingDrawerLayout.setRightDrawerWidthPercent(
+        SlidingDrawerLayout.UNSPECIFIED_DRAWER_WIDTH_PERCENT);
+mSlidingDrawerLayout.setStartDrawerWidthPercent(0.8f);
+mSlidingDrawerLayout.setEndDrawerWidthPercent(0.9f);
+
+mSlidingDrawerLayout.setDrawerEnabledInTouch(GravityCompat.START, true /* default value */);
+mSlidingDrawerLayout.setDrawerEnabledInTouch(mEndDrawer, true);
+
+mSlidingDrawerLayout.setDuration(256 /* in milliseconds */);
+mSlidingDrawerLayout.setContentSensitiveEdgeSize(
+        50f * getResources().getDisplayMetrics().density /* in pixels */);
+mSlidingDrawerLayout.setContentFadeColor(/* ColorInt */ 0xFF_FF4081);
+```
 
 #### Open/Close a Drawer:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/open:close%20a%20drawer.png" width="500">
+```Java
+mSlidingDrawerLayout.openDrawer(GravityCompat.START, /* animate */ true);
+mSlidingDrawerLayout.openDrawer(mEndDrawer, /* animate */ true);
+mSlidingDrawerLayout.closeDrawer(/* animate */ true);
+```
 
 #### Listener Related:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/listener%20releated.png" width="500">
+```Java
+mSlidingDrawerLayout.addOnDrawerScrollListener(this);
+mSlidingDrawerLayout.removeOnDrawerScrollListener(this);
+mSlidingDrawerLayout.clearOnDrawerScrollListeners();
+```
 
 ### Attributes:
 ```xml
