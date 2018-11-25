@@ -94,8 +94,27 @@ mSlidingDrawerLayout.closeDrawer(/* animate */ true);
 
 #### Listener Related:
 ```Java
-mSlidingDrawerLayout.addOnDrawerScrollListener(this);
-mSlidingDrawerLayout.removeOnDrawerScrollListener(this);
+final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLayout.OnDrawerScrollListener() {
+    @Override
+    public void onDrawerOpened(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
+    }
+
+    @Override
+    public void onDrawerClosed(@NonNull SlidingDrawerLayout parent, @NonNull View drawer) {
+    }
+
+    @Override
+    public void onScrollPercentChange(@NonNull SlidingDrawerLayout parent, 
+                                      @NonNull View drawer, float percent) {
+    }
+
+    @Override
+    public void onScrollStateChange(@NonNull SlidingDrawerLayout parent,
+                                    @NonNull View drawer, int state) {
+    }
+};
+mSlidingDrawerLayout.addOnDrawerScrollListener(listener);
+mSlidingDrawerLayout.removeOnDrawerScrollListener(listener);
 mSlidingDrawerLayout.clearOnDrawerScrollListeners();
 ```
 
