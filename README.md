@@ -92,7 +92,7 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
     mSlidingDrawerLayout.closeDrawer(/* animate */ true);
     ```
 
->> Listener Related:
+- Listener Related:
     ```Java
     final SlidingDrawerLayout.OnDrawerScrollListener listener = new SlidingDrawerLayout.OnDrawerScrollListener() {
         @Override
