@@ -68,13 +68,13 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
 ## Usages:
 ### Public Methods:
 #### Getters & Setters:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/getters%20%26%20setters.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/getters%20%26%20setters.png" width="500">
 
 #### Open/Close a Drawer:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/open:close%20a%20drawer.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/open:close%20a%20drawer.png" width="500">
 
 #### Listener Related:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/listener%20releated.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/listener%20releated.png" width="500">
 
 ### Attributes:
 ```xml
