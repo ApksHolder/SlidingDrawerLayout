@@ -68,13 +68,13 @@ A layout derived from ViewGroup, not any other indirect container, such as Frame
 ## Usages:
 ### Public Methods:
 #### Getters & Setters:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/getters%20%26%20setters.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/getters%20%26%20setters.png">
 
 #### Open/Close a Drawer:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/open:close%20drawer.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/open:close%20drawer.png">
 
 #### Listener Related:
-<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/listener%20releated.png" width="300">
+<img src="https://github.com/ApksHolder/SlidingDrawerLayout/blob/master/listener%20releated.png">
 
 ### Attributes:
 ```xml
@@ -82,10 +82,10 @@ app:widthPercent_leftDrawer="unspecified"
 app:widthPercent_rightDrawer="unspecified"
 app:widthPercent_startDrawer="0.8"
 app:widthPercent_endDrawer="0.9"
-app:enabled_leftDrawer="true"
-app:enabled_rightDrawer="true"
-app:enabled_startDrawer="true"
-app:enabled_endDrawer="true"
+app:enabledInTouch_leftDrawer="true"
+app:enabledInTouch_rightDrawer="true"
+app:enabledInTouch_startDrawer="true"
+app:enabledInTouch_endDrawer="true"
 app:duration="256"
 app:contentSensitiveEdgeSize="50dp"
 app:contentFadeColor="@color/colorAccent"
